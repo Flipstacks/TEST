@@ -5,8 +5,8 @@ services:
         environment: 
         - "POSTGRESS_PASSWORD=pass" 
         - "POSTGRESS_USERNAME=postgres"
-        # volumes: 
-        #     - data_sql:/var/lib/postgresql/data
+        volumes: 
+            - data_sql:/var/lib/postgresql/data
         
     backend:
         build: ./api
