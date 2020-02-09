@@ -12,13 +12,12 @@ services:
         build: ./api
         depends_on: 
             - db
-        # ports:
-        #     - "5000:5000"
     frontend:
         build: ./client
         depends_on: 
             - backend
-        # ports:
-        #     - "3000:3000"
+        ports:
+            - "5000:3000"
+            - "81:80"
 volumes: 
     data_sql:
